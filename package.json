@@ -1,0 +1,28 @@
+{
+  "name": "splitster-redux",
+  "version": "0.0.1",
+  "description": "Splitster extension for redux (react) applications",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "babel src -d lib --ignore **/*.test.js",
+    "flow": "flow",
+    "flow:start": "flow start",
+    "flow:stop": "flow stop"
+  },
+  "repository": "https://github.com/VladimirJarabica/splitster-redux.git",
+  "author": "VladimirJarabica <vladojarabica@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.0.0",
+    "splitster": "^0.0.19"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "flow-bin": "^0.56.0",
+    "prettier": "^1.7.3"
+  }
+}
