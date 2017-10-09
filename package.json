@@ -1,6 +1,6 @@
 {
   "name": "splitster-redux",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Splitster extension for redux (react) applications",
   "main": "lib/main.js",
   "scripts": {
