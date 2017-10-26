@@ -31,6 +31,7 @@ type Set = {
   payload: {
     testId: string,
     variantId: string,
+    cookies: boolean,
   },
 }
 
@@ -76,10 +77,15 @@ export const run = (test: string): Run => ({
   payload: test,
 })
 
-export const set = (testId: string, variantId: string): Set => ({
+export const set = (
+  testId: string,
+  variantId: string,
+  cookies?: boolean = false,
+): Set => ({
   type: 'splitster/SET',
   payload: {
     testId,
     variantId,
+    cookies,
   },
 })

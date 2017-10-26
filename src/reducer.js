@@ -41,7 +41,7 @@ const splitsterReducer = (
       return state
     case 'splitster/SET':
       // $FlowFixMe
-      return state.set(action.payload.testId, action.payload.variantId)
+      return state.set(action.payload.testId, action.payload.variantId, action.payload.cookies)
     default:
       return state
   }
