@@ -931,9 +931,9 @@ source-map@^0.5.6:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
-splitster@^0.0.23:
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/splitster/-/splitster-0.0.23.tgz#dff0195492714175ea69e846acb9b1764838f0bf"
+splitster@^0.0.24:
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/splitster/-/splitster-0.0.24.tgz#88cd8e945f4fe4c632bbda64c6c2d8b188e4f495"
   dependencies:
     babel-plugin-ramda "^1.4.3"
     js-cookie "^2.1.4"
