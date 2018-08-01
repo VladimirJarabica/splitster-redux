@@ -18,9 +18,15 @@ type InitClient = {
 }
 type ServerToSave = {
   type: 'splitster/SERVER_TO_SAVE',
+  payload: {
+    includeVersion: boolean,
+  },
 }
 type ClientToSave = {
   type: 'splitster/CLIENT_TO_SAVE',
+  payload: {
+    includeVersion: boolean,
+  },
 }
 type Run = {
   type: 'splitster/RUN',
@@ -64,12 +70,18 @@ export const initClient = (config: Config, user?: Object): InitClient => ({
   },
 })
 
-export const serverToSave = (): ServerToSave => ({
+export const serverToSave = (includeVersion?: boolean = false): ServerToSave => ({
   type: 'splitster/SERVER_TO_SAVE',
+  payload: {
+    includeVersion,
+  },
 })
 
-export const clientToSave = (): ClientToSave => ({
+export const clientToSave = (includeVersion?: boolean = false): ClientToSave => ({
   type: 'splitster/CLIENT_TO_SAVE',
+  payload: {
+    includeVersion,
+  },
 })
 
 export const run = (test: string): Run => ({

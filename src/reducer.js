@@ -29,7 +29,7 @@ const splitsterReducer = (
     case 'splitster/SERVER_TO_SAVE':
     case 'splitster/CLIENT_TO_SAVE':
       // $FlowFixMe
-      return state.getSaveResults()
+      return state.getSaveResults(action.payload.includeVersion)
     case 'splitster/RUN':
       if (action.test) {
         // $FlowFixMe
