@@ -1,11 +1,11 @@
 // @flow
-import splitsterInit, {
-  server as serverInit,
-  SplitsterClient,
-  SplitsterServer,
-} from 'splitster'
+// import splitsterInit, {
+//   server as serverInit,
+//   SplitsterClient,
+//   SplitsterServer,
+// } from 'splitster'
 
-import type { SaveResults } from 'splitster/src/main'
+import { initSplitsterBrowser, initSplitsterServer } from 'splitster'
 
 import type { Action } from './actions'
 
@@ -22,26 +22,31 @@ const splitsterReducer = (
   switch (action.type) {
     case 'splitster/INIT_SERVER':
       // $FlowFixMe
-      return serverInit(action.payload.config, action.payload.user, action.payload.def || state)
+      return initSplitsterServer(
+        action.payload.config,
+        action.payload.user,
+        action.payload.userId,
+        action.payload.def || state,
+      )
     case 'splitster/INIT_CLIENT':
       // $FlowFixMe
-      return splitsterInit(action.payload.config, action.payload.user, state)
+      return initSplitsterBrowser(
+        action.payload.config,
+        action.payload.user,
+        action.payload.userId,
+        state,
+      )
     case 'splitster/SERVER_TO_SAVE':
     case 'splitster/CLIENT_TO_SAVE':
       // $FlowFixMe
       return state.getSaveResults(action.payload.includeVersion)
-    case 'splitster/RUN':
-      if (action.test) {
-        // $FlowFixMe
-        state.run(action.payload)
-      } else {
-        // $FlowFixMe
-        state.runAll()
-      }
-      return state
     case 'splitster/SET':
       // $FlowFixMe
-      return state.set(action.payload.testId, action.payload.variantId, action.payload.cookies)
+      return state.set(
+        action.payload.testId,
+        action.payload.variantId,
+        action.payload.cookies,
+      )
     default:
       return state
   }
