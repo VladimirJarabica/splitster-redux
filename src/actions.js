@@ -1,11 +1,12 @@
 // @flow
-import type { Config, SaveResults } from 'splitster/src/main'
+import type { Config } from 'splitster/src/index'
 
 type InitServer = {
   type: 'splitster/INIT_SERVER',
   payload: {
     config: Config,
     user: ?Object,
+    userId: string,
     def: ?SaveResults,
   },
 }
@@ -13,6 +14,7 @@ type InitClient = {
   type: 'splitster/INIT_CLIENT',
   payload: {
     config: Config,
+    userId: string,
     user: ?Object,
   },
 }
@@ -52,41 +54,47 @@ export type Action =
 export const initServer = (
   config: Config,
   user?: Object,
+  userId?: string,
   def?: SaveResults,
 ): InitServer => ({
   type: 'splitster/INIT_SERVER',
   payload: {
     config,
     user,
+    userId,
     def,
   },
 })
 
-export const initClient = (config: Config, user?: Object): InitClient => ({
+export const initClient = (
+  config: Config,
+  user?: Object,
+  userId: string,
+): InitClient => ({
   type: 'splitster/INIT_CLIENT',
   payload: {
     config,
+    userId,
     user,
   },
 })
 
-export const serverToSave = (includeVersion?: boolean = false): ServerToSave => ({
+export const serverToSave = (
+  includeVersion?: boolean = false,
+): ServerToSave => ({
   type: 'splitster/SERVER_TO_SAVE',
   payload: {
     includeVersion,
   },
 })
 
-export const clientToSave = (includeVersion?: boolean = false): ClientToSave => ({
+export const clientToSave = (
+  includeVersion?: boolean = false,
+): ClientToSave => ({
   type: 'splitster/CLIENT_TO_SAVE',
   payload: {
     includeVersion,
   },
-})
-
-export const run = (test: string): Run => ({
-  type: 'splitster/RUN',
-  payload: test,
 })
 
 export const set = (
