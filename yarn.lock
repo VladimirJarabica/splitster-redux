@@ -1948,9 +1948,9 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
-"splitster@git+https://github.com/VladimirJarabica/splitster#new-beginning":
+"splitster@git+https://github.com/VladimirJarabica/splitster#new-beginning-one-client":
   version "0.0.44"
-  resolved "git+https://github.com/VladimirJarabica/splitster#4816b9628572e985bdbf9c3587832df328b44a5b"
+  resolved "git+https://github.com/VladimirJarabica/splitster#3caba05f0ed463882d66de6dfac9f6df92aff15a"
   dependencies:
     js-cookie "^2.1.4"
     ramda "^0.24.1"

@@ -14,8 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.0.0",
-    "splitster":
-      "git+https://github.com/VladimirJarabica/splitster#new-beginning"
+    "splitster": "git+https://github.com/VladimirJarabica/splitster#new-beginning-one-client"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

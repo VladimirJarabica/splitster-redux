@@ -5,7 +5,7 @@
 //   SplitsterServer,
 // } from 'splitster'
 
-import { initSplitsterBrowser, initSplitsterServer } from 'splitster'
+import { init } from 'splitster'
 
 import type { Action } from './actions'
 
@@ -22,7 +22,7 @@ const splitsterReducer = (
   switch (action.type) {
     case 'splitster/INIT_SERVER':
       // $FlowFixMe
-      return initSplitsterServer(
+      return init(
         action.payload.config,
         action.payload.user,
         action.payload.userId,
@@ -30,7 +30,7 @@ const splitsterReducer = (
       )
     case 'splitster/INIT_CLIENT':
       // $FlowFixMe
-      return initSplitsterBrowser(
+      return init(
         action.payload.config,
         action.payload.user,
         action.payload.userId,
