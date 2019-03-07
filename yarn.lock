@@ -1948,9 +1948,9 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
-splitster@^0.0.46:
-  version "0.0.46"
-  resolved "https://registry.yarnpkg.com/splitster/-/splitster-0.0.46.tgz#0e90cd2c1522835fe976813a4de72aab5049a6e9"
+splitster@^0.0.48:
+  version "0.0.48"
+  resolved "https://registry.yarnpkg.com/splitster/-/splitster-0.0.48.tgz#02747299695562dc099e2b3a6407aa43cc108aef"
   dependencies:
     js-cookie "^2.1.4"
     ramda "^0.24.1"
