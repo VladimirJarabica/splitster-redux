@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.0.0",
-    "splitster": "^0.0.45"
+    "splitster": "^0.0.46"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
